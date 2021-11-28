@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Project_LSi52889</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Lovepreet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--linking CSS stylesheet and JavaScript -->
+    <link rel="stylesheet" href="css/css_LSi52889.css">
+    <script src="script/script_LSi52889.js"></script>
+</head>
+<body>
+    <header class="header">
+        <h1>CSIS 1280 Project_LSi52889</h1>  
+    </header>
+    <nav class="navbar"> <!--Navigation links-->
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="page2_LSi52889.html">Store</a></li>
+            <li><a href="page3_LSi52889.html">Buy</a></li>
+        </ul>
+    </nav>
+    <article>
+        <div id="page3_container">
+            <form name="myForm" action="" method="get">
+                <!-- First fieldset for Customer Details -->
+                <fieldset id="customerDetails">
+                    <legend>Customer Details</legend>
+                    <div>
+                        <label for="customerName">Name:</label>
+                        <input type="text" name="customerName" id="customerName" placeholder="Your Name" required>
+                    </div>
+                    <div>
+                        <label for="customerEmail">E-mail:</label>
+                        <input type="email" name="customerEmail" id="customerEmail" placeholder="loveartpreet@gmail.com" pattern="([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?" required>
+                    </div>
+                    <div>
+                        <label for="customerAddress">Address:</label>
+                        <input type="text" name="customerAddress" id="customerAddress" placeholder="Street, City, State, Country" required>
+                    </div>
+                    <div>
+                        <label for="contactNumber">Mobile Number:</label>
+                        <input type="text" name="contactNumber" id="contactNumber" placeholder="xxx-xxx-xxxx" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                    </div>
+                    <div>   
+                        <label for="customerOrder">Your Order:</label>
+                        <textarea name="customerOrder" id="customerOrder" rows="4"  placeholder="Type your Order that drawing's prints you want to order with quantity and by Art Name: from store ,and with frame and its color if want. ." required></textarea>
+                    </div>
+                    <div id="submitreset">
+                        <input type="submit" value="Submit Data" onclick="runValidate(this.form)">
+                        <input type ="button" value="Display Data" onclick="getInformation(form)">
+                        <input type="reset" value="Clear Input">
+                    </div>   
+                </fieldset> 
+                <!-- Second fieldset for display customer information -->
+                <fieldset>
+                    <legend >Customer Information</legend>
+                        <div id="information_target">Information :</div>  
+                </fieldset> 
+                <!-- Third fieldset for free gift style -->
+                <fieldset id="changeStyle">
+                    <h1>Get free Drawing print (Gift Card) on order</h1>
+                    <legend>Change Style</legend>
+                        <div>
+                            <label for="image">Select your Drawing:</label>
+                            <span>
+                                <input type="radio" name="image" required value="images/peacockQuote.jpg" onclick="changeImage(this);">Peacock Quote
+                                <input type="radio" name="image" value="images/mermaidGold.jpg" onclick="changeImage(this);">Mermaid Gold
+                            </span>
+                        </div>
+                        <div>
+                            <label for="style">Style your Card:</label>
+                            <span>
+                                <input type="checkbox" name="style" required value="border-radius: 20px;">Border
+                                <input type="checkbox" name="style" value="box-shadow: 4px 4px 4px #424b54">Shadow
+                                <input type="checkbox" name="style" value="border: 6px solid #e1ce7a">Burlywood Border
+                            </span>
+                        <div>   
+                            <label for="text">Text:</label>
+                            <textarea name="text" id="text" rows="4"  placeholder="Type your message here." required></textarea>
+                        </div>
+                        <div id="button"></div>
+                            <input type="button" name="apply_choice" required value="apply choice" onclick="setStyle(this.form);">
+                        </div>          
+                </fieldset>
+                <!-- Fourth fieldset for Free gift Display -->
+                <fieldset id="gift">
+                    <legend >Free Gift</legend>
+                        <div><img src="images/blankImage.jpg" id="image_target" alt="image choice"></div>
+                        <div id="text_target">Text :</div>  
+                </fieldset>            
+            </form>
+        </div>
+    </article>
+    <footer>
+        <hr>
+        <div class="footer_container">
+            <div class="box">
+                <h3>Quick links</h3>
+                <a href="index.html">Home</a>
+                <a href="page2_LSi52889.html">Store</a>
+                <a href="page3_LSi52889.html">Buy</a>
+                <a href="page3_LSi52889.html">Free Gift</a>
+            </div>
+            <div class="box">
+                <h3>Services</h3>
+                <a href="#">Buy</a>
+                <a href="#">Help</a>
+                <a href="#">Gift</a>
+                <a href="#">Delivery</a>
+            </div>
+            <div class="box">
+                <h3>Follow Us</h3>
+                <a href="https://www.instagram.com/accounts/login/" target="_blank">Instagram</a>
+                <a href="https://www.facebook.com/" target="_blank">Facebook</a>
+                <a href="https://www.pinterest.ca/login/" target="_blank">Pintrest</a>
+                <a href="https://twitter.com/i/flow/login"  target="_blank">Twitter</a>
+            </div>
+            <div class="box">
+                <h3>Contact Us</h3>
+                <a href="#">xxxxx@gmail.com</a>
+                <a href="#">xxxxxxxxaddress</a>
+                <a href="#">+(703)-xxx-xxxx</a>
+                <a href="#">+(604)-xxx-xxxx</a>
+            </div>   
+        </div>
+        <p><small>Copyright &copy; CSIS 1280 Project_LSi52889</small></p>
+    </footer>
+</body>
+</html>
